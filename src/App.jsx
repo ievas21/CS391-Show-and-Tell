@@ -96,14 +96,19 @@ const StyledImg = styled.img`
     animation: ${Spin} infinite 20s linear;
 `;
 
-function App() {
+export default function App() {
     const [song, setSong] = useState("");
     const [title, setTitle] = useState("");
     const [{ isPlaying, isMuted }, audioRef] = useAudio({ autoPlay: false });
 
     const handlePlay = () => audioRef.current.play();
     const handlePause = () => audioRef.current.pause();
-    const handleToggleMute = () => (audioRef.current.muted = !isMuted);
+    const handleToggleMute = () => {
+        audioRef.current.muted = !audioRef.current.muted;
+        setMuted(audioRef.current.muted);
+    };
+
+    const [muted, setMuted] = useState(isMuted);
 
     function firstSong() {
         setSong("./mitski-i-dont-smoke.mp3");
@@ -157,11 +162,10 @@ function App() {
 
               <StyledButton onClick={handlePlay}>Play</StyledButton>
               <StyledButton onClick={handlePause}>Pause</StyledButton>
-              <StyledButton onClick={handleToggleMute}>{isMuted ? "Unmute" : "Mute"}</StyledButton>
+              <StyledButton onClick={handleToggleMute}>{muted ? "Unmute" : "Mute"}</StyledButton>
 
           </StyledButtonDiv>
       </>
   )
 }
 
-export default App
