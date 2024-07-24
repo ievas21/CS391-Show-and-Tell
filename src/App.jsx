@@ -103,17 +103,17 @@ function App() {
     const handleToggleMute = () => (audioRef.current.muted = !isMuted);
 
     function firstSong() {
-        setSong("/mitski-i-dont-smoke.mp3");
+        setSong("./mitski-i-dont-smoke.mp3");
         setTitle("I Don`t Smoke by Mitski");
     }
 
     function secondSong() {
-        setSong("/pinegrove-angelina.mp3");
+        setSong("./pinegrove-angelina.mp3");
         setTitle("Angelina by Pinegrove");
     }
 
     function thirdSong() {
-        setSong("/tv-girl-taking-whats-not-yours.mp3");
+        setSong("./tv-girl-taking-whats-not-yours.mp3");
         setTitle("Taking What`s Not Yours by TV Girl");
     }
 
