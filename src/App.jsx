@@ -4,7 +4,7 @@ import styled, {createGlobalStyle, keyframes} from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     html {
-        background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%) no-repeat fixed;
+        background: radial-gradient(circle at 10% 20%, rgb(253, 193, 104) 0%, rgb(251, 128, 128) 90%) no-repeat fixed;
 `;
 
 const StyledHeading = styled.h1`
@@ -31,9 +31,10 @@ const StyledSongButton = styled.button`
     padding: 1.2%;
     font-weight: bold;
     border-radius: 15px;
-    background:  #f5c7f7;
+    background:  #f6e4ad;
     font-size: 20px;
     font-family: "Lucida Console", "Courier New", monospace;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 `;
 
 const StyledButton = styled.button`
@@ -42,13 +43,14 @@ const StyledButton = styled.button`
     align-items: center;
     width: 22%;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 20px 20px 20px;
     padding: 0.8%;
     font-size: 20px;
     font-weight: bold;
     border-radius: 15px;
-    background:  #f3d7ca;
+    background:  #f6e4ad;
     font-family: "Lucida Console", "Courier New", monospace;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 `;
 
 const StyledContainer = styled.div`
@@ -79,7 +81,7 @@ const Subtitle = styled.h3`
     display: inline-block;
     justify-content: center;
     vertical-align: middle;
-    margin-right: 20px;
+    margin-right: 8px;
     font-family: "Lucida Console", "Courier New", monospace;
 
 `;
@@ -90,6 +92,7 @@ const StyledImg = styled.img`
     vertical-align: middle;
     width: 50px;
     height: 50px;
+    margin-top: 5px;
     animation: ${Spin} infinite 20s linear;
 `;
 
@@ -136,7 +139,7 @@ function App() {
 
               <StyledSongButton onClick={thirdSong}>TV Girl - Taking What`s Not Yours</StyledSongButton>
 
-              <br/> <br/> <br/>
+              <br/> <br/>
 
               <StyledContainer>
 
